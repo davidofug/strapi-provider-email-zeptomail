@@ -16,11 +16,12 @@ If you want your Strapi users to reset passwords, receive email confirmation etc
 
     Using NPM
 
-    `npm i strapi-provider-email-zeptomail --save`
+    ```npm i strapi-provider-email-zeptomail --save```
+
 
     Using Yarn
 
-    `yarn add strapi-provider-email-zeptomail`
+    ```yarn add strapi-provider-email-zeptomail```
 
 ### 3. Configure this extension
 
@@ -47,7 +48,7 @@ Add ZEPTOMAIL_URL and ZEPTOMAIL_TOKEN keys together with correspondig values to 
 
     This provider extends the Strapi default email plugin. Use the following syntax.
 
-`   email: {
+`email: {
         config: {
             provider: "strapi-provider-email-zeptomail",
             providerOptions: {
@@ -59,5 +60,4 @@ Add ZEPTOMAIL_URL and ZEPTOMAIL_TOKEN keys together with correspondig values to 
             defaultFrom: "me@example.com",
             defaultReplyTo: "me@example.com",
         },
-    }
-  `
+    }`
