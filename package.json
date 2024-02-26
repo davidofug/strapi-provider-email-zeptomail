@@ -1,32 +1,32 @@
 {
-  "name": "strapi-provider-email-zeptomail",
-  "version": "0.1.1",
-  "description": "Zeptomail provider for strapi email",
-  "keywords": [
-    "strapi",
-    "email",
-    "provider",
-    "zeptomail"
-  ],
-  "homepage": "",
-  "bugs": {
-    "url": ""
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "license": "MIT",
-  "author": "David Wampamba",
-  "main": "./src",
-  "directories": {
-    "lib": "./src"
-  },
-  "scripts": {},
-  "dependencies": {
-    "zeptomail": "^6.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^18.15.5"
-  }
+	"name": "strapi-provider-email-zeptomail",
+	"version": "0.1.1",
+	"description": "Zeptomail provider for strapi email",
+	"keywords": [
+		"strapi",
+		"email",
+		"provider",
+		"zeptomail"
+	],
+	"homepage": "",
+	"bugs": {
+		"url": "https://github.com/davidofug/strapi-provider-email-zeptomail/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/davidofug/strapi-provider-email-zeptomail"
+	},
+	"license": "MIT",
+	"author": "David Wampamba",
+	"main": "./src",
+	"directories": {
+		"lib": "./src"
+	},
+	"scripts": {},
+	"dependencies": {
+		"zeptomail": "^6.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "^18.15.5"
+	}
 }
