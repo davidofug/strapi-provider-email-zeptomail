@@ -41,7 +41,7 @@ yarn add strapi-provider-email-zeptomail
 
 Obtain the url and token from zeptomail account
 
-**_Edit environment variables_**
+**_Set environment variables_**
 
 Add `ZEPTOMAIL_URL` and `ZEPTOMAIL_TOKEN` keys together with correspondig values to the .env file of your Strapi project.
 
@@ -58,7 +58,9 @@ ZEPTOMAIL_TOKEN=value_from_your_zeptomail_account
 
 Edit `./config/plugins.js` or create the `plugins.js` file in ./`config` directory if it doesn't exist.
 
-This provider extends the Strapi default email plugin. Use the following syntax.
+The snippet below demonstrates how to acheive enabling the email plugin in Strapi. Replace me@example.com with your valid email address. For example, no-reply@domain.com
+
+_Note:_ If you don't specify the defaultFrom, it will default to no-reply@strapi.io
 
 ```
 email: {
@@ -75,3 +77,9 @@ email: {
     },
 }
 ```
+
+## How to support
+
+1. Send an issue
+2. Contribute code and documentation
+3. Buy me coffee => https://cutt.ly/bwEy0ejA
