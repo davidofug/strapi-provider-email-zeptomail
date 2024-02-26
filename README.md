@@ -2,39 +2,50 @@
 
 Send emails from Strapi through zeptomail.
 
+## Introduction
+
 Zeptomail is a popular email service, which is among the best at delivering transactional mail messages.
 
 If you want your Strapi users to reset passwords, receive email confirmation etc, look into Zeptomail.
 
 ## Requirements
 
+1. Working Strapi v4 project
+2. A valid Zeptomail account
+3. Zeptomail url and Zeptomail token
+4. Configure email plugin in Strapi
+
+## The Steps to follow
+
 ### 1. Zeptomail account
 
-    You need a valid Zeptomail account. Register for free on zeptomail.com. Get 100/mails per day for FREE. Verify your account and purchase credit to send more.
+Get a free acoount on zeptomail.com and send 100 mails per day for FREE. Verify your account and purchase credit to send more.
 
-### 2. Install the provider Strapi
+### 2. Installation
 
-Using NPM
+Use NPM
 
-    ```npm i strapi-provider-email-zeptomail --save```
+```
+npm i strapi-provider-email-zeptomail --save
+```
 
-Using Yarn
+Use Yarn
 
-    ```yarn add strapi-provider-email-zeptomail```
+```
+yarn add strapi-provider-email-zeptomail
+```
 
-### 3. Configure this extension
+### 3. Configuration
 
-Edit `./config/plugins.js` or create the `plugins.js` file in ./`config` directory if it doesn't exist.
-
-### Zeptomail credentials
+**_Zeptomail credentials_**
 
 Obtain the url and token from zeptomail account
 
-### Edit environment variables
+**_Edit environment variables_**
 
-Add `ZEPTOMAIL_URL` and `ZEPTOMAIL_TOKEN` keys together with correspondig values to the .env file of your Strapi project
+Add `ZEPTOMAIL_URL` and `ZEPTOMAIL_TOKEN` keys together with correspondig values to the .env file of your Strapi project.
 
-**_Example: Environment variables_**
+**_Example on environment variables_**
 
 ```
 ...
@@ -43,22 +54,24 @@ ZEPTOMAIL_TOKEN=value_from_your_zeptomail_account
 ...
 ```
 
-### Let Strapi know your
+### 4. Enable email plugin
+
+Edit `./config/plugins.js` or create the `plugins.js` file in ./`config` directory if it doesn't exist.
 
 This provider extends the Strapi default email plugin. Use the following syntax.
 
 ```
 email: {
-        config: {
-            provider: "strapi-provider-email-zeptomail",
-            providerOptions: {
-                url: env("ZEPTOMAIL_URL"),
-                apiKey: env("ZEPTOMAIL_TOKEN"),
-            }
-        },
-        settings: {
-            defaultFrom: "me@example.com",
-            defaultReplyTo: "me@example.com",
-        },
-    }
+    config: {
+        provider: "strapi-provider-email-zeptomail",
+        providerOptions: {
+            url: env("ZEPTOMAIL_URL"),
+            apiKey: env("ZEPTOMAIL_TOKEN"),
+        }
+    },
+    settings: {
+        defaultFrom: "me@example.com",
+        defaultReplyTo: "me@example.com",
+    },
+}
 ```
