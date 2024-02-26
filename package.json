@@ -26,6 +26,9 @@
 	"dependencies": {
 		"zeptomail": "^6.0.0"
 	},
+	"peerDependencies": {
+		"@strapi/strapi": "^4.6.0"
+	},
 	"devDependencies": {
 		"@types/node": "^18.15.5"
 	}
