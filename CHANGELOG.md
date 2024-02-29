@@ -1,15 +1,28 @@
-## [0.1.5] - 2024-02-29
+## Version 0.1.6
+
+**_Date: 2024-02-29_**
+
+### Fixed
+
+-   Not sending reset password email
+-   Not sending email confirmation email
+
+## Version 0.1.5
+
+**_Date:2024-02-29_**
 
 ### Fixed
 
 -   Sender name should be set in `./config/plugins.js`
 -   replyTo address should be set in `./config/plugins.js`
 
-## Improvements
+### Improvements
 
 -   Enable using separate html and plain text for email body
 
-## [0.1.4] - 2024-02-29
+## Version 0.1.4
+
+**_Date: 2024-02-29_**
 
 ### Fixed
 
