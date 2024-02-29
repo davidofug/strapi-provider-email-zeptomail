@@ -1,6 +1,6 @@
 {
 	"name": "strapi-provider-email-zeptomail",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "Zeptomail provider for strapi email",
 	"keywords": [
 		"strapi",
