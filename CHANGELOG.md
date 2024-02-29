@@ -13,4 +13,4 @@
 
 ### Fixed
 
--   Issue where email body wasn't send in the test email message.
+-   Issue where email body wasn't set in the test email message.

@@ -32,6 +32,7 @@ module.exports = {
 					textbody: text,
 					...rest,
 				};
+
 				if (settings.replyTo) {
 					messageDetails["reply_to"] = {
 						address: settings.replyTo,
