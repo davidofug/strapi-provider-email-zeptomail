@@ -58,9 +58,29 @@ ZEPTOMAIL_TOKEN=value_from_your_zeptomail_account
 
 Edit `./config/plugins.js` or create the `plugins.js` file in ./`config` directory if it doesn't exist.
 
-The snippet below demonstrates how to acheive enabling the email plugin in Strapi. Replace me@example.com with your valid email address. For example, no-reply@domain.com
+The snippet below demonstrates how to achieve enabling the email plugin in Strapi. Replace me@example.com with your valid email address. For example, no-reply@domain.com
 
-_Note:_ If you don't specify the defaultFrom, it will default to no-reply@strapi.io
+_Notes:_
+
+1.  If you don't specify the defaultFrom, it will default to no-reply@strapi.io
+2.  Replace the values in defaultFrom,defaultReplyTo,replyTo, and sender_name with your own valid values. These should have been set in Zeptomail
+
+### Email Configurations
+
+| Key             | Sub-Key | Value                           |
+| --------------- | ------- | ------------------------------- |
+| provider        |         | strapi-provider-email-zeptomail |
+| providerOptions | url     | env("ZEPTOMAIL_URL")            |
+| providerOptions | apiKey  | env("ZEPTOMAIL_TOKEN")          |
+
+### Email settings
+
+| Key            | Value               |
+| -------------- | ------------------- |
+| defaultFrom    | me@example.com      |
+| defaultReplyTo | me@example.com      |
+| replyTo        | noreply@example.com |
+| sender_name    | Your App name       |
 
 ```
 email: {
@@ -74,9 +94,19 @@ email: {
     settings: {
         defaultFrom: "me@example.com",
         defaultReplyTo: "me@example.com",
+        replyTo: "noreply@example.com",
+        sender_name: "Your App name"
     },
 }
 ```
+
+## Links
+
+[Zeptomail Email API documentation](https://www.zoho.com/zeptomail/help/api/email-sending.html)
+
+[Error codes documentation](https://www.zoho.com/zeptomail/help/api/error-codes.html)
+
+[Strapi documentation](https://docs.strapi.io)
 
 ## How to support
 

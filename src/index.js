@@ -18,7 +18,7 @@ module.exports = {
 				const messageDetails = {
 					from: {
 						address: from || settings.defaultFrom,
-						name: settings.sender_name,
+						name: settings.sender_name || "",
 					},
 					to: [
 						{
@@ -27,15 +27,17 @@ module.exports = {
 							},
 						},
 					],
-					reply_to: {
-						address: settings.replyTo,
-						name: settings.sender_name,
-					},
 					subject,
 					htmlbody: html,
 					textbody: text,
 					...rest,
 				};
+				if (settings.replyTo) {
+					messageDetails["reply_to"] = {
+						address: settings.replyTo,
+						name: settings.sender_name,
+					};
+				}
 
 				try {
 					return await mailClient.sendMail(messageDetails);
