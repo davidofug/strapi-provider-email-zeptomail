@@ -13,21 +13,12 @@ module.exports = {
 		});
 		return {
 			send: async function (options) {
-				const {
-					from,
-					to,
-					cc,
-					bcc,
-					replyTo,
-					subject,
-					text,
-					html,
-					...rest
-				} = options;
+				const { from, to, cc, bcc, subject, text, html, ...rest } =
+					options;
 				const messageDetails = {
 					from: {
 						address: from || settings.defaultFrom,
-						name: "Insightify",
+						name: settings.sender_name,
 					},
 					to: [
 						{
@@ -36,8 +27,13 @@ module.exports = {
 							},
 						},
 					],
+					reply_to: {
+						address: settings.replyTo,
+						name: settings.sender_name,
+					},
 					subject,
-					htmlbody: html || text,
+					htmlbody: html,
+					textbody: text,
 					...rest,
 				};
 
