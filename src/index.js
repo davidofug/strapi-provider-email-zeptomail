@@ -15,10 +15,19 @@ module.exports = {
 			send: async function (options) {
 				const { from, to, cc, bcc, subject, text, html, ...rest } =
 					options;
+
+				const emailRegex = /[\w.-]+@[\w.-]+\.\w+/;
+
+				// Extract the email address using the regex
+				const extractedEmail = from?.match(emailRegex)[0];
+
+				const senderNameRegex = /^(.*?)\s*</;
+				const senderNameMatch = from?.match(senderNameRegex);
+				const senderName = senderNameMatch ? senderNameMatch[1] : null;
 				const messageDetails = {
 					from: {
-						address: from || settings.defaultFrom,
-						name: settings.sender_name || "",
+						address: extractedEmail || settings.defaultFrom,
+						name: senderName || settings.sender_name,
 					},
 					to: [
 						{
@@ -30,9 +39,7 @@ module.exports = {
 					subject,
 					htmlbody: html,
 					textbody: text,
-					...rest,
 				};
-
 				if (settings.replyTo) {
 					messageDetails["reply_to"] = {
 						address: settings.replyTo,
@@ -43,7 +50,7 @@ module.exports = {
 				try {
 					return await mailClient.sendMail(messageDetails);
 				} catch (error) {
-					console.error(error);
+					console.error(JSON.stringify(error, null, 2));
 				}
 			},
 		};
