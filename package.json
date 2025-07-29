@@ -19,6 +19,7 @@
 	"license": "MIT",
 	"author": "David Wampamba",
 	"main": "./src",
+	"types": "./src/index.d.types",
 	"directories": {
 		"lib": "./src"
 	},
@@ -28,8 +29,5 @@
 	},
 	"peerDependencies": {
 		"@strapi/strapi": "^5.19.0"
-	},
-	"devDependencies": {
-		"@types/node": "^24.1.0"
 	}
 }
