@@ -19,7 +19,7 @@
 	"license": "MIT",
 	"author": "David Wampamba",
 	"main": "./src",
-	"types": "./src/index.d.types",
+	"types": "./src/index.d.ts",
 	"directories": {
 		"lib": "./src"
 	},
