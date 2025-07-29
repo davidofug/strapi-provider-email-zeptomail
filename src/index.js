@@ -3,9 +3,6 @@
 const { SendMailClient } = require("zeptomail");
 
 module.exports = {
-	provider: "zeptomail",
-	name: "Zeptomail",
-
 	init: function (providerOptions, settings) {
 		const mailClient = new SendMailClient({
 			url: providerOptions.url,
