@@ -28,6 +28,6 @@
 		"zeptomail": "^6.2.1"
 	},
 	"peerDependencies": {
-		"@strapi/strapi": "^5.19.0"
+		"@strapi/strapi": "^5.18.1"
 	}
 }
