@@ -5,12 +5,21 @@ interface Settings {
     sender_name: string;
 }
 
+interface EmailAddress {
+    address: string;
+    name: string;
+}
+
+interface CcBccItem {
+    email_address: EmailAddress;
+}
+
 interface SendOptions {
     from?: string;
     to: string;
-    cc?: string;
-    bcc?: string;
-    replyTo?: string;
+    cc?: CcBccItem[];
+    bcc?: CcBccItem[];
+    replyTo?: EmailAddress[];
     subject: string;
     text: string;
     html?: string;
