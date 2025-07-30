@@ -7,7 +7,7 @@ interface Settings {
 
 interface EmailAddress {
     address: string;
-    name: string;
+    name?: string;
 }
 
 interface CcBccItem {
@@ -15,8 +15,8 @@ interface CcBccItem {
 }
 
 interface SendOptions {
-    from?: string;
-    to: string;
+    from?: EmailAddress;
+    to: CcBccItem[];
     cc?: CcBccItem[];
     bcc?: CcBccItem[];
     replyTo?: EmailAddress[];

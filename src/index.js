@@ -14,9 +14,12 @@ module.exports = {
 					options;
 
 				const messageDetails = {
-					to,
-					from: from || settings.defaultFrom,
-					subject,
+					to: to,
+					from: from || {
+						address: settings.defaultFrom,
+						name: settings.sender_name
+					},
+					subject: subject,
 					textbody: text,
 					htmlbody: html,
 					cc: cc,
