@@ -8,12 +8,12 @@ interface Settings {
 interface SendOptions {
     from?: string;
     to: string;
-    cc: string;
-    bcc: string;
+    cc?: string;
+    bcc?: string;
     replyTo?: string;
     subject: string;
     text: string;
-    html: string;
+    html?: string;
     [key: string]: unknown;
 }
 
