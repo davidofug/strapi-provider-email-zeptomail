@@ -1,3 +1,11 @@
+## Version 0.2.0
+
+**_Date: 2025-08-12_**
+
+### Introduced
+
+-   Support for Strapi 5
+
 ## Version 0.1.6
 
 **_Date: 2024-02-29_**
