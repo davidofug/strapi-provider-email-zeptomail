@@ -10,7 +10,7 @@ If you want your Strapi users to reset passwords, receive email confirmation etc
 
 ## Requirements
 
-1. Working Strapi v4 project
+1. Working Strapi v4+ project
 2. A valid Zeptomail account
 3. Zeptomail url and Zeptomail token
 4. Configure email plugin in Strapi
